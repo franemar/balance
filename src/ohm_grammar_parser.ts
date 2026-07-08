@@ -8,7 +8,7 @@ import * as fs from 'fs';
 const contents = fs.readFileSync('grammar.ohm', 'utf-8');
 const g = ohm.grammar(contents);
 
-const testString = '23/06/2026 Portfolio:HighRisk:Wagering:Betsson:Sports 5 Revenue:HighRisk:Wagering .47 -> Portfolio:HighRisk:Wagering:Betsson "Colombia vs. RD Congo"';
+const testString = '23/06/2026 Wagering.Sports 5 Wagering.Revenue .47 -> Wagering "Colombia vs. RD Congo"';
 
 const result = g.match(testString);
 if (result.failed()) {
