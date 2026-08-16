@@ -3,6 +3,12 @@ node_modules/
 jspm_packages/
 web_modules/
 
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.vsix
+
 # TypeScript / JavaScript Build Output
 dist/
 out/
@@ -14,6 +20,9 @@ lib/
 # src/**/*.js
 # src/**/*.js.map
 # src/**/*.d.ts
+**/src/generated
+syntaxes/
+
 
 # Logs
 logs
