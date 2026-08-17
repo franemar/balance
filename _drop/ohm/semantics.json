@@ -1,0 +1,128 @@
+{ 
+  "comments": "Gemini's ledger entry for a sports betting wager transaction (from escrow viewpoint).",
+  "transaction_id": "tx_987654321_abc",
+  "reference_id": "bet_idx_55412",
+  "timestamp": "2026-07-05T16:10:34Z",
+  "user_id": "usr_441298",
+  "account_id": "wallet_cash_01",
+  "transaction_type": "WAGER",
+  "payment_method": "CASH",
+  "amount": 50.00,
+  "currency": "USD",
+  "metadata": {
+    "game_type": "SPORTS_BOOK",
+    "event_id": "evt_man_city_vs_liverpool",
+    "bet_type": "SINGLE",
+    "odds": 1.85
+  },
+  "ledger_entries": [
+    {
+      "entry_id": "ent_01",
+      "account_number": "1010-CUSTOMER-FUNDS",
+      "account_name": "Customer Cash Wallet",
+      "entry_type": "CREDIT",
+      "amount": 50.00,
+      "description": "Deduction for bet placement"
+    },
+    {
+      "entry_id": "ent_02",
+      "account_number": "2020-ESCROW-WAGERS",
+      "account_name": "Pending Wagers Escrow",
+      "entry_type": "DEBIT",
+      "amount": 50.00,
+      "description": "Funds held for active bet"
+    }
+  ],
+  "status": "COMPLETED"
+},
+{
+  "transaction_id": "tx_123456789_xyz",
+  "reference_id": "bet_idx_55412",
+  "timestamp": "2026-07-05T18:30:00Z",
+  "user_id": "usr_441298",
+  "account_id": "wallet_cash_01",
+  "transaction_type": "WINNING_PAYOUT",
+  "payment_method": "CASH",
+  "total_payout_amount": 92.50,
+  "net_winnings": 42.50,
+  "currency": "USD",
+  "metadata": {
+    "game_type": "SPORTS_BOOK",
+    "event_id": "evt_man_city_vs_liverpool",
+    "outcome": "WIN",
+    "odds": 1.85
+  },
+  "ledger_entries": [
+    {
+      "entry_id": "ent_03",
+      "account_number": "2020-ESCROW-WAGERS",
+      "account_name": "Pending Wagers Escrow",
+      "entry_type": "CREDIT",
+      "amount": 50.00,
+      "description": "Release of original wager from escrow"
+    },
+    {
+      "entry_id": "ent_04",
+      "account_number": "5010-PAYOUT-EXPENSE",
+      "account_name": "Gaming Payout Expense",
+      "entry_type": "CREDIT",
+      "amount": 42.50,
+      "description": "House expense for net winnings"
+    },
+    {
+      "entry_id": "ent_05",
+      "account_number": "1010-CUSTOMER-FUNDS",
+      "account_name": "Customer Cash Wallet",
+      "entry_type": "DEBIT",
+      "amount": 92.50,
+      "description": "Deposit of total payout (Wager + Winnings)"
+    }
+  ],
+  "status": "COMPLETED"
+},
+{
+  "comments": "Gemini's ledger entry for a sports wager win transaction (from escrow viewpoint).",
+  "transaction_id": "tx_123456789_xyz",
+  "reference_id": "bet_idx_55412",
+  "timestamp": "2026-07-05T18:30:00Z",
+  "user_id": "usr_441298",
+  "account_id": "wallet_cash_01",
+  "transaction_type": "WINNING_PAYOUT",
+  "payment_method": "CASH",
+  "total_payout_amount": 92.50,
+  "net_winnings": 42.50,
+  "currency": "USD",
+  "metadata": {
+    "game_type": "SPORTS_BOOK",
+    "event_id": "evt_man_city_vs_liverpool",
+    "outcome": "WIN",
+    "odds": 1.85
+  },
+  "ledger_entries": [
+    {
+      "entry_id": "ent_03",
+      "account_number": "2020-ESCROW-WAGERS",
+      "account_name": "Pending Wagers Escrow",
+      "entry_type": "CREDIT",
+      "amount": 50.00,
+      "description": "Release of original wager from escrow"
+    },
+    {
+      "entry_id": "ent_04",
+      "account_number": "5010-PAYOUT-EXPENSE",
+      "account_name": "Gaming Payout Expense",
+      "entry_type": "CREDIT",
+      "amount": 42.50,
+      "description": "House expense for net winnings"
+    },
+    {
+      "entry_id": "ent_05",
+      "account_number": "1010-CUSTOMER-FUNDS",
+      "account_name": "Customer Cash Wallet",
+      "entry_type": "DEBIT",
+      "amount": 92.50,
+      "description": "Deposit of total payout (Wager + Winnings)"
+    }
+  ],
+  "status": "COMPLETED"
+}

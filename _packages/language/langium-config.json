@@ -1,0 +1,16 @@
+{
+    "projectName": "Finclang",
+    "languages": [
+        {
+            "id": "finclang",
+            "grammar": "src/finclang.langium",
+            "fileExtensions": [
+                "fncl"
+            ],
+            "textMate": {
+                "out": "syntaxes/finclang.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/generated"
+}
